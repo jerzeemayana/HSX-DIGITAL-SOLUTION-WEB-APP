@@ -1,0 +1,320 @@
+body {
+  
+  font-size: 18px;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 500;
+}
+
+
+
+.toggle  {
+  float: right;
+  transform: translate(-20%, -30%);
+   transition: ease-in-out 5s;
+   cursor: pointer;
+   
+  
+}
+ ul {
+  
+  text-align: center;
+  transition: 5s;
+  display: none;
+
+  
+ 
+}
+
+
+.close-toggle {
+  display: inline;
+  transition: 5s;
+}
+
+
+
+
+nav ul li a {
+  line-height: 8vh;
+ 
+  margin: 0 auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  
+  color: hsl(136, 65%, 51%);
+  
+}
+
+.intro {
+  font-size: 1.3rem;
+  margin-top: 80px;
+}
+
+.heading{
+  font-weight: bold;
+  font-size: 1.5rem;
+  
+} 
+a:hover {
+  text-decoration: none;
+}
+
+a.shop:hover {
+  text-decoration: none;
+  color: white;
+  
+}
+
+
+a.shop {
+  border: 2px solid hsl(136, 65%, 51%);
+  padding: 5px 25px 5px 25px;
+  color: black;
+  border-radius: 15px;
+  width: 240px;
+  
+  animation: slide-in 0.8s ease-in-out infinite;
+  display: block;
+  
+
+ 
+}
+a.shop:hover {
+  border: 2px solid hsl(136, 65%, 51%);
+  padding: 5px 25px 5px 25px;
+  border-radius: 15px;
+  width: 280px;
+  
+  animation: none;
+  display: block;
+  transition: 2s;
+  color: white;
+  
+
+ 
+}
+
+.choose-heading:hover{
+color: hsl(136, 65%, 51%);
+cursor: pointer;
+}
+.what-we-do {
+  text-align: center;
+  font-size: 2rem
+}
+
+
+@keyframes slide-in {
+  from {
+      transform: translateX(20px)
+  }
+  to {
+      transform: translateY(0px)
+  }
+}
+
+.card:hover { 
+    cursor: pointer;
+    
+
+}
+.shop:hover {
+  background-color: hsl(136, 65%, 51%);
+  
+  
+
+}
+.choose-us {
+  text-align: center;
+  background: hsl(0, 0%, 98%);
+  background-position-y: 30%;
+}
+
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  text-align: center;
+ 
+}
+
+li {
+  list-style: none;
+  color: white;
+}
+li a {
+  color: rgb(172, 42, 42);
+  text-decoration: none;
+}
+
+.mockup-bg {
+  background: url('../images/bg-intro-mobile.svg') no-repeat ;
+  background-size: cover;
+}
+
+
+
+/* MOBILE NAVIGATION LAYOUT */
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 576px){
+  /* 576px and Up */
+ 
+}
+
+@media screen and (min-width: 768px){
+  /* 768px and up */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 99;
+    background: white;
+  }
+  .toggle img {
+    display:none;
+  }
+
+  .intro {
+    transform: translate(0%, 30%);
+  }
+  
+  nav .h-logo h2 {
+  
+   transition: .5s;
+  
+  }
+  nav {
+    text-align: start;
+  }
+  
+  nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transform: translate(0%, -80%);
+  }
+
+  nav ul li a {
+   
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    color: hsl(136, 65%, 51%);
+    border-bottom: none;
+  }
+
+  nav.black {
+    background: hsl(233, 26%, 24%);
+    height: 80px;
+    padding: 10px 50px;
+  }
+  nav.black ul li a{
+    color: white
+  }
+  nav ul li a:hover {
+    text-decoration: none;
+    color: hsl(136, 65%, 51%);
+  }
+  .mockup-bg {
+    background: url('../images/bg-intro-desktop.svg') no-repeat ;
+    background-size: cover;
+  }
+ 
+  footer {
+    text-align: start;
+   
+  }
+  .our-stack {
+    margin-left: 4px;
+  }
+  .grid-ct {
+    display: flex;
+    justify-content: space-around;
+    line-height: 5vh;
+    align-items: center;
+    height: 30vh;
+    align-content: center;
+    text-align: start;
+  }
+  .shop-footer {
+  border: 2px solid hsl(136, 65%, 51%);
+  padding: 7px 25px 7px 25px;
+  border-radius: 15px;
+  width: 180px;
+  background-color: hsl(136, 65%, 51%);
+  animation: none;
+  transition: 2s;
+  color: white;
+  }
+
+  .grid1,.grid4 {
+    line-height: 10vh;
+  }
+
+  
+  
+ 
+}
+
+@media screen and (min-width: 998px){
+  /* 998px and up */
+ .intro {
+   transform: translate(0%, 22%);
+ }
+
+ .mockup-bg {
+  transform: translate(0%, -18%);
+ }
+ .choose-us {
+    
+  background: hsl(0, 0%, 98%);
+  background-position-y: 30%;
+  text-align: start;
+  height: 70vh;
+  
+}
+#us {
+  transform: translate(0, 31%);
+}
+.head {
+  font-size: 50px;
+}
+.heading{
+  font-size: 1.9rem;
+  font-weight: bold;
+ 
+}
+.intro {
+  line-height: 5vh;
+  font-size: 1.5rem;
+  margin-top: 50px;
+}
+footer {
+  text-align: start;
+ 
+}
+.what-we-do {
+  text-align: center;
+  font-size: 3rem;
+}
+
+}
+@media screen and (min-width: 1200px){
+  /* 1200px and up */
+  
+}

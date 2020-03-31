@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HSX</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- bootsrap -->
+    <link rel="stylesheet" href="./stylesheets/css/bootstrap.min.css">
+    <!-- font-awesome -->
+    <script src="./stylesheets/js/all.js"></script>
+    <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <!-- main css -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  
+  $(window).on('scroll', function(){
+    if($(window).scrollTop()){
+      $('nav').addClass('black')
+    }else {
+      $('nav').removeClass('black')
+    }
+  })
+
+  $(document).ready(function(){
+    $('.toggle img').click( function(){
+      $('nav ul').toggleClass('close-toggle')
+    })
+  })
+  </script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+<style>
+
+
+</style>
+
+</head>
+
+
+<body>
+<div class="container">
+   <nav>
+    <div class="h-logo">
+      <a href="/"><img src="./images/logo.svg" class="footer-logo"></a>
+    </div>
+
+    <div class="toggle">
+      <img src="./images/icon-hamburger.svg" alt="" class="burger " >
+    </div>
+    <ul class="off">
+      <li class="li"><a href="/">Home</a></li>
+      <li class="li"><a href="#" data-toggle="modal" data-target="#exampleModal">Contact</a></li>
+      <li class="li"><a href="https://www.patreon.com/bePatron?u=32641418">Support US</a></li>
+    </ul>
+  </nav><br><br>
+  </div>
+  <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/" method="post">
+        <div id="error-div" style="color: red"></div>
+  <div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm">Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-sm"  placeholder="Enter Name" id="name" name="name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-3 col-form-label">Email</label>
+    <div class="col-sm-9">
+      <input type="email" class="form-control" id="email" placeholder="Name" name="email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Messages</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-lg w-10" id="message" placeholder="Enter Message" name="message">
+    </div>
+  </div>
+  <button type="submit" id="form-button" class="btn btn-secondary text-center">Send</button>
+</form>
+         
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  
+
+  {{!-- NAVIGATION START --}}
+    
+ 
+ {{!-- NAVIGATION END --}}
+
+   {{{body}}}
+    <script src="./stylesheets/js/jquery-3.4.1.min.js"></script>
+    <script src="./stylesheets/js/bootstrap.bundle.min.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e81f7c435bcbb0c9aabe000/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<script src="./javascripts/index.js"></script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

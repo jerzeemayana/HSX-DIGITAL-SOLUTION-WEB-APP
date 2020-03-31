@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/add">Add Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <br><br><br><br><br>
+  <div class="container">
+    <table class="table ">
+  <thead class="thead-dark">
+    <tr>
+
+      <th scope="col">ID</th>
+      <th scope="col">TITLE</th>
+      <th scope="col">AUTHOR</th>
+      <th scope="col">DELETE</th>
+      <th scope="col">EDIT</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each posts}}
+    <tr>
+      <th scope="row">{{_id}}</th>
+      <td>{{titile}}</td>
+      <td>{{author}}</td>
+      <td>
+        <form method="post" action="/admin/delete/{{_id}}">
+          <input type="submit" value="Delete" class="btn btn-danger">
+          <input type="hidden" name="_csrf" value="{_csrf}">
+          <input type="hidden" name="_method" value="DELETE">
+        </form>
+      </td>
+      <td><a href="/admin/edit/{{_id}}" class="btn btn-primary">Edit</a></td>
+    </tr>
+    {{/each}}
+   
+  </tbody>
+</table>
+</div>
+
+
+         
+    
+{{!-- <form method="POST" id="regForm" action="/admin/index">
+<label for="">Title</label>
+<input type="text" name="titile" id="titile" value="{{titile}}">
+<label for="">Category</label>
+<input type="text" name="category" id="category" value="{{category}}">
+<label for="">author</label>
+<input type="text" name="author" id="author" value="{{author}}">
+<label for="">body</label>
+<input type="text" name="body" id="body" value="{{body}}">
+<input type="submit" value="signup">
+
+</form> --}}
+ 
+ {{!-- NAVIGATION END --}}
+  
