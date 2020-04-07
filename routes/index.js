@@ -10,6 +10,8 @@ router.get('/', function(req, res, next){
   res.render('index', {title: 'express'})
 }),
 
+
+
 router.post('/', (req, res) => {
 
   // Instantiate the SMTP server
@@ -18,7 +20,7 @@ router.post('/', (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: 'jacksas540@gmail.com',
+      user: 'hsxdigitals@gmail.com',
       pass: 'hasyjay22'
     },
     tls:{
@@ -28,10 +30,15 @@ router.post('/', (req, res) => {
 
   // Specify what the email will look like
   const mailOpts = {
-    from: 'Your sender info here', // This is ignored by Gmail
-    to: 'jacksas540@gmail.com',
-    subject: 'New message from contact form at hsxdigitals.tech',
-    text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+    from: 'HSX DIGITAL SOLUTION', // This is ignored by Gmail
+    to: `${req.body.email}`,
+    subject: 'HSX DIGITAL SOLUTION',
+    text: `Dear, ${req.body.name} You've Taken a Great Step In Your Self Development Journey. Kindly Join the Telegram Workspace with the below link.
+https://www.t.me/hsxdigitals
+    
+Alternative: search hsxdigitals channel on telegram
+    
+Hassan.  `
   }
 
   // Attempt to send the email
@@ -41,8 +48,8 @@ router.post('/', (req, res) => {
     }
     else {
       
-     res.redirect('/') // Show a page indicating success
-     alert('sent')
+     res.redirect('/emailsent') // Show a page indicating success
+     console.log('sent')
     }
   })
 })

@@ -46,6 +46,8 @@ nav ul li a {
   
 }
 
+
+
 .intro {
   font-size: 1.3rem;
   margin-top: 80px;
@@ -286,6 +288,7 @@ li a {
   background-position-y: 30%;
   text-align: start;
   height: 70vh;
+  
   
 }
 #us {

@@ -17,6 +17,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var postsRouter = require('./routes/posts');
 var adminRouter = require('./routes/admin');
+var emailRouter = require('./routes/email');
 
 var app = express();
 //favicon
@@ -37,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/shop', postsRouter);
+app.use('/emailsent', emailRouter);
 
 //For Admins only (becareful)
 app.use('/', adminRouter)
