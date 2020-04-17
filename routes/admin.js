@@ -8,6 +8,7 @@ var Posts = require('../models/posts')
          router.get('/admin', function(req, res, next) {
             Posts.getPosts(function(err, posts){
               res.render('admin/index', { posts: posts });
+              res.render('index', {posts: post});
             });
           
           });
@@ -22,12 +23,14 @@ var Posts = require('../models/posts')
             var category = req.body.category && req.body.category;
             var author = req.body.author && req.body.author;
             var body = req.body.body && req.body.body;
+            var adsense = req.body.adsense && req.body.adsense;
 
             var newPosts = new Posts({
               titile: titile,
               category: category,
               author:author,
-              body:body
+              body:body,
+              adsense: adsense
             });
             newPosts.save(function(err){
               if(err){

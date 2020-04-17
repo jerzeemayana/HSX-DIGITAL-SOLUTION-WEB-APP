@@ -4,13 +4,21 @@
 
      
 
-
+<head>
 <style>
     .fa-star {
         color: gold;
       
     }
 </style>
+ {{#each posts}}
+
+ {{adsense}}
+
+
+
+ {{/each}}
+</head>
 <body>
 <br><br><br><br>
 <div class="container">
@@ -33,6 +41,7 @@
                      {{/each}}
                     </div>
                     </div>
+               
                     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -46,5 +55,8 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+      {{#each posts}}
+        {{adsense}}
+    {{/each}}
                     </body>
                      <!--en
