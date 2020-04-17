@@ -19,9 +19,7 @@ var PostsSchema = mongoose.Schema({
         type: String
     },
 
-    adsense: {
-        type: String
-    },
+   
 
     date: {
         type: Number
