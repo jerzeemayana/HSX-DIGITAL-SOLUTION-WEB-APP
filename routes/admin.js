@@ -8,7 +8,7 @@ var Posts = require('../models/posts')
          router.get('/admin', function(req, res, next) {
             Posts.getPosts(function(err, posts){
               res.render('admin/index', { posts: posts });
-              res.render('index', {posts: post});
+              
             });
           
           });
