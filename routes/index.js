@@ -20,8 +20,8 @@ router.post('/', (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: 'hsxdigitals@gmail.com',
-      pass: 'hasyjay22'
+      user: process.env.gmail,
+      pass: process.env.password
     },
     tls:{
       rejectUnauthorized: false

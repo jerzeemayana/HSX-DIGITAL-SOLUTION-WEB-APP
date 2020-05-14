@@ -12,7 +12,7 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
           //Mongolab
-mongoose.connect('mongodb+srv://sas:sas@cluster0-qsodi.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true } );
+mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true } );
 
     //LocalHost MONGODB Connection
 // mongoose.connect('mongodb://localhost:27017', { useNewUrlParser: true } );
